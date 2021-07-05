@@ -1,4 +1,4 @@
-package com.qfedu;
+package com.cquedu.fmmall;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

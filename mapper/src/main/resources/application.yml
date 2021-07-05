@@ -1,0 +1,13 @@
+#完成数据源配置
+spring:
+  datasource:
+    druid:
+      driver-class-ame: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/secondhand?characterEncoding=utf-8
+      username: root
+      password: root
+
+#配置mybatis
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  type-aliases-package: com.cquedu.fmmall.entity

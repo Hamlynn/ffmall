@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cquedu.fmmall.dao.UserMapper">
+<!--    mybatis-plus中的User一定要写明-->
+    <resultMap id="userMap" type="com.cquedu.fmmall.entity.User">
+        <id column="u_Account" property="u_Account"></id>
+        <result column="u_Name" property="u_Name"></result>
+        <result column="u_Password" property="u_Password"></result>
+        <result column="u_Sex" property="u_Sex"></result>
+        <result column="u_Email" property="u_Email"></result>
+        <result column="u_Phone" property="u_Phone"></result>
+
+    </resultMap>
+    <select id="queryUserByName" resultMap="userMap">
+        select u_Account,u_Name,u_Password,u_Sex,u_Email,u_Phone from user where u_Name=#{name}
+    </select>
+</mapper>
